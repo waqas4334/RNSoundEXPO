@@ -5,8 +5,7 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { SoundsScreen } from "../components/organisms/SoundsScreen";
 import { SettingScreen } from "../components/organisms/SettingScreen";
 import { CustomScreen } from "../components/organisms/CustomScreen";
-import { Ionicons } from "@expo/vector-icons";
-import { Sliders } from "react-native-feather";
+import { Sliders,Music,Settings } from "react-native-feather";
 import {
   scale,
   verticalScale,
@@ -30,12 +29,12 @@ const MainScreenTabs = () => {
         component={SoundsScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="ios-musical-notes" size={scale(20)} color={color} />
+            <Music color={color} size={scale(20)} />
           ),
         }}
       />
       <Tab.Screen
-        name="Custom"
+        name="White Noises"
         component={CustomScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
@@ -48,7 +47,7 @@ const MainScreenTabs = () => {
         component={SettingScreen}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="ios-settings" color={color} size={scale(20)} />
+            <Settings color={color} size={scale(20)} />
           ),
         }}
       />
